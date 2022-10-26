@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <a href="../../index.html"
+          ><img src="../../assets/icon.png" alt="medicare logo"
+        /></a>
+        <span id="hamburger">&#9776;</span>
+      </div>
+      <ul class="nav-item-container hidden">
+        <li class="nav-item"><a href="../../index.html">Home</a></li>
+        <li class="nav-item" id="products">
+          <a>Products</a>
+          <ul class="nav-products hidden">
+            <li class="nav-products-hover">
+              <a href="./healthcare.html">Healthcare</a>
+            </li>
+            <li class="nav-products-hover"><a href="#">Cosmetic</a></li>
+            <li class="nav-products-hover"><a href="#">Misc.</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="./about.html">About Us</a></li>
+        <li class="nav-item"><a href="./register.html">Register</a></li>
+        <li class="nav-item"><a href="#">Login</a></li>
+      </ul>
+    </nav>
+    <div class="login-form">
+      <h1>Login</h1>
+      <form action="./index.html">
+        <div class="text-field">
+          <input type="text" id="loginemail" required /><br />
+          <label for="loginemail">Email</label>
+        </div>
+        <div class="text-field">
+          <input type="password" id="loginpassword" required /><br />
+          <label for="loginpassword">Password</label>
+        </div>
+        <input type="button" value="Login" />
+        <p>
+          Don't have an account yet? <a href="register.html">Register</a> now!
+        </p>
+      </form>
+    </div>
+    <footer>
+      <div class="social-icons">
+        <a href="https://www.twitter.com/" target="_blank"
+          ><img
+            src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png"
+        /></a>
+        <a href="https://www.facebook.com/" target="_blank"
+          ><img
+            src="https://img.icons8.com/material-outlined/30/000000/facebook-f.png"
+        /></a>
+        <a href="https://www.instagram.com/" target="_blank"
+          ><img
+            src="https://img.icons8.com/fluency-systems-regular/30/000000/instagram-new--v1.png"
+        /></a>
+      </div>
+      <p>Copyright ©2022 Andrew Garcia. All Rights Reserved</p>
+    </footer>
+    <script src="../js/home.js"></script>
+  </body>
+</html>

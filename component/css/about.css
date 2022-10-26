@@ -1,0 +1,53 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+main {
+  margin: 15vh 12vw;
+}
+
+.about {
+  text-align: center;
+}
+
+.about p {
+  font-weight: 400;
+  text-align: justify;
+}
+
+.about h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+footer {
+  margin: 3em;
+}
+
+@media only screen and (min-width: 600px) {
+  .about h1 {
+    font-size: 4rem;
+    font-weight:300;
+  }
+
+  .about p{
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+
+  br {
+    display: none
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .contact p{
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/register.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <a href="../../index.html"
+          ><img src="../../assets/icon.png" alt="medicare logo"
+        /></a>
+        <span id="hamburger">&#9776;</span>
+      </div>
+      <ul class="nav-item-container hidden">
+        <li class="nav-item"><a href="../../index.html">Home</a></li>
+        <li class="nav-item" id="products">
+          <a>Products</a>
+          <ul class="nav-products hidden">
+            <li class="nav-products-hover">
+              <a href="./healthcare.html">Healthcare</a>
+            </li>
+            <li class="nav-products-hover"><a href="#">Cosmetic</a></li>
+            <li class="nav-products-hover"><a href="#">Misc.</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="./about.html">About Us</a></li>
+        <li class="nav-item active"><a href="#">Register</a></li>
+        <li class="nav-item"><a href="./login.html">Login</a></li>
+      </ul>
+    </nav>
+    <div class="login-form">
+      <h1>Register</h1>
+      <form action="./index.html">
+        <div class="text-field">
+          <input type="text" id="name" required /><br />
+          <label for="name">Full Name</label>
+        </div>
+        <div class="text-field">
+          <input type="email" id="email" required /><br />
+          <label for="email">Email</label>
+        </div>
+        <div class="radio-field">
+          <p>Gender</p>
+          <input type="radio" name="gender" id="male" />
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="female" />
+          <label for="female">Female</label>
+        </div>
+        <div class="select-field">
+          <label for="city">City<br /><br /></label>
+          <select id="city" name="city">
+            <option>Jakarta</option>
+            <option>Tangerang</option>
+            <option>Bekasi</option>
+          </select>
+        </div>
+        <div class="text-field">
+          <input type="password" id="password" required /><br />
+          <label for="password">Password</label>
+        </div>
+        <div class="text-field">
+          <input type="password" id="password2" required /><br />
+          <label for="password">Confirm Password</label>
+        </div>
+        <input type="button" value="Register" id="button" />
+      </form>
+    </div>
+    <footer>
+      <div class="social-icons">
+        <a href="https://www.twitter.com/" target="_blank"
+          ><img
+            src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png"
+        /></a>
+        <a href="https://www.facebook.com/" target="_blank"
+          ><img
+            src="https://img.icons8.com/material-outlined/30/000000/facebook-f.png"
+        /></a>
+        <a href="https://www.instagram.com/" target="_blank"
+          ><img
+            src="https://img.icons8.com/fluency-systems-regular/30/000000/instagram-new--v1.png"
+        /></a>
+      </div>
+      <p>Copyright ©2022 Andrew Garcia. All Rights Reserved</p>
+    </footer>
+    <script src="../js/home.js"></script>
+  </body>
+</html>
