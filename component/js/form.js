@@ -7,7 +7,6 @@ const regisFemaleGender = document.querySelector("#genfemale");
 const regisCity = document.querySelector("#regiscity");
 const regisPass = document.querySelector("#regispassword");
 const regisPass2 = document.querySelector("#regispassword2");
-const allInput = document.getElementsByTagName("input");
 
 function removeRequired(el) {
   const element = document.querySelector(`#${el.id}`);
@@ -62,10 +61,3 @@ function regisCheck() {
   if (message != "") alert(message);
   return message == "";
 }
-
-allInput.addEventListener("focus", function (e) {
-  document.body.classList.add("keyboard");
-});
-allInput.addEventListener("blur", function () {
-  document.body.classList.remove("keyboard");
-});
