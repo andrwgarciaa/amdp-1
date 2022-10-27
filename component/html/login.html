@@ -35,12 +35,14 @@
     </nav>
     <div class="login-form">
       <h1>Login</h1>
-      <form action="../../index.html" onsubmit="return loginCheck()">
+      <form action="./healthcare.html" onsubmit="return loginCheck()">
         <div class="text-field">
           <input
             type="text"
             id="loginemail"
-            onchange="removeRequired(this)"
+            required
+            onfocus="removeRequired(this)"
+            onblur="removeRequired(this)"
           /><br />
           <label for="loginemail">Email</label>
         </div>
@@ -48,7 +50,9 @@
           <input
             type="password"
             id="loginpassword"
-            onchange="removeRequired(this)"
+            required
+            onfocus="removeRequired(this)"
+            onblur="removeRequired(this)"
           /><br />
           <label for="loginpassword">Password</label>
         </div>

@@ -1,5 +1,5 @@
 .login-form {
-  max-height: 75vh;
+  max-height: 100vh;
 }
 
 .text-field {
@@ -35,6 +35,23 @@
 .text-field input:valid ~ label {
   top: 10px;
   color: #38abab;
+}
+
+input[type="radio"] {
+  appearance: none;
+  background-color: white;
+  color: #38abab;
+  width: 1em;
+  height: 1em;
+  border: 0.1em solid #38abab;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+  appearance: auto;
+  accent-color: #38abab;
+  border: none;
+  outline: none;
 }
 
 @media only screen and (min-width: 600px) {

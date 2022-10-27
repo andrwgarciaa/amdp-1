@@ -11,15 +11,18 @@ const allInput = document.getElementsByTagName("input");
 
 function removeRequired(el) {
   const element = document.querySelector(`#${el.id}`);
-  if (!element.value.length == 0) {
-    element.classList.add("filled");
-  }
+  element.toggleAttribute("required");
 }
 
 function loginCheck() {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   let message = "";
   if (loginEmail.value.length < 1) {
     message += "Email harus diisi!\n";
+  } else {
+    if (!emailPattern.test(loginEmail.value)) {
+      message += "Format email tidak tepat!\n";
+    }
   }
   if (loginPass.value.length < 1) {
     message += "Password harus diisi!\n";
@@ -29,22 +32,40 @@ function loginCheck() {
 }
 
 function regisCheck() {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const passPattern = /^(?=.*[\d])(?=.*[A-Z])[\w]{8,}/;
   let message = "";
   if (regisName.value.length < 1) {
     message += "Nama harus diisi!\n";
   }
-  if (!regisEmail.value.endsWith("@[a-z].[a-z]")) {
+  if (!emailPattern.test(regisEmail.value)) {
     message += "Format email tidak tepat!\n";
   }
-  // if (regisName.value.length < 1){
-  //     message += 'Nama harus diisi!\n'
-  // }
-  alert(message);
-  return false;
+  if (!(genmale.checked || genfemale.checked)) {
+    message += "Pilih gender!\n";
+  }
+  if (regisPass.value.length < 8) {
+    message += "Password minimal 8 karakter!\n";
+  } else {
+    if (!passPattern.test(regisPass.value)) {
+      message +=
+        "Password harus memiliki minimal 1 huruf kapital dan 1 angka!\n";
+    }
+  }
+  if (regisPass2.value.length < 1) {
+    message += "Tulis kembali password yang sama!\n";
+  } else {
+    if (regisPass2.value != regisPass.value) {
+      message += "Konfirmasi password tidak sesuai!\n";
+    }
+  }
+  if (message != "") alert(message);
+  return message == "";
 }
 
-allInput.addEventListener("focus", function () {
+allInput.addEventListener("focus", function (e) {
   document.body.classList.add("keyboard");
+  //   e.removeAttribute("required");
 });
 allInput.addEventListener("blur", function () {
   document.body.classList.remove("keyboard");

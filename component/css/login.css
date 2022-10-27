@@ -14,6 +14,7 @@ body {
   position: absolute;
   text-align: center;
   font-size: 0.8rem;
+  z-index: 0;
   top: 50%;
   left: 50%;
   width: calc(0.2vw * 400);

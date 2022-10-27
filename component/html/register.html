@@ -36,13 +36,25 @@
     </nav>
     <div class="login-form">
       <h1>Register</h1>
-      <form action="../../index.html">
+      <form action="./healthcare.html" onsubmit="return regisCheck()">
         <div class="text-field">
-          <input type="text" id="regisname" /><br />
+          <input
+            type="text"
+            id="regisname"
+            required
+            onfocus="removeRequired(this)"
+            onblur="removeRequired(this)"
+          /><br />
           <label for="regisname">Full Name</label>
         </div>
         <div class="text-field">
-          <input type="email" id="regisemail" /><br />
+          <input
+            type="text"
+            id="regisemail"
+            required
+            onfocus="removeRequired(this)"
+            onblur="removeRequired(this)"
+          /><br />
           <label for="regisemail">Email</label>
         </div>
         <div class="radio-field">
@@ -61,11 +73,23 @@
           </select>
         </div>
         <div class="text-field">
-          <input type="password" id="regispassword" /><br />
-          <label for="password">Password</label>
+          <input
+            type="password"
+            id="regispassword"
+            required
+            onfocus="removeRequired(this)"
+            onblur="removeRequired(this)"
+          /><br />
+          <label for="password">Password (minimum 8 characters)</label>
         </div>
         <div class="text-field">
-          <input type="password" id="regispassword2" /><br />
+          <input
+            type="password"
+            id="regispassword2"
+            required
+            onfocus="removeRequired(this)"
+            onblur="removeRequired(this)"
+          /><br />
           <label for="password">Confirm Password</label>
         </div>
         <input

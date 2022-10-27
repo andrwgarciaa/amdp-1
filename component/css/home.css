@@ -15,6 +15,9 @@ a {
 
 .nav-container {
   display: flex;
+  position: relative;
+  background-color: white;
+  z-index: 1;
   justify-content: space-between;
   align-items: center;
   padding: 0rem 1rem;
@@ -33,7 +36,6 @@ a {
   justify-content: center;
   align-items: center;
   position: absolute;
-  /* box-shadow: 1px 1px 1px black; */
 }
 .nav-item {
   color: white;
