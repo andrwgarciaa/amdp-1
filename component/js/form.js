@@ -65,7 +65,6 @@ function regisCheck() {
 
 allInput.addEventListener("focus", function (e) {
   document.body.classList.add("keyboard");
-  //   e.removeAttribute("required");
 });
 allInput.addEventListener("blur", function () {
   document.body.classList.remove("keyboard");
