@@ -8,13 +8,23 @@ const regisCity = document.querySelector("#regiscity");
 const regisPass = document.querySelector("#regispassword");
 const regisPass2 = document.querySelector("#regispassword2");
 
-function loginCheck() {
-  if (loginEmail.value.length < 1) {
-    alert("Email harus diisi!");
-  } else if (loginPass.value.length < 1) {
-    alert("Password harus diisi!");
+function removeRequired(el) {
+  const element = document.querySelector(`#${el.id}`);
+  if (!element.value.length == 0) {
+    element.classList.add("filled");
   }
-  return false;
+}
+
+function loginCheck() {
+  let message = "";
+  if (loginEmail.value.length < 1) {
+    message += "Email harus diisi!\n";
+  }
+  if (loginPass.value.length < 1) {
+    message += "Password harus diisi!\n";
+  }
+  if (message != "") alert(message);
+  return message == "";
 }
 
 function regisCheck() {
@@ -29,4 +39,26 @@ function regisCheck() {
   //     message += 'Nama harus diisi!\n'
   // }
   alert(message);
+  return false;
 }
+
+document.body.addEventListener(
+  "focus",
+  (event) => {
+    const target = event.target;
+    switch (target.tagName) {
+      case "INPUT":
+      case "TEXTAREA":
+      case "SELECT":
+        document.body.classList.add("keyboard");
+    }
+  },
+  true
+);
+document.body.addEventListener(
+  "blur",
+  () => {
+    document.body.classList.remove("keyboard");
+  },
+  true
+);

@@ -6,6 +6,10 @@ body {
   overflow: hidden;
 }
 
+.keyboard {
+  height: calc(100% + 500px);
+}
+
 .login-form {
   position: absolute;
   text-align: center;

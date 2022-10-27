@@ -35,16 +35,24 @@
     </nav>
     <div class="login-form">
       <h1>Login</h1>
-      <form action="../../index.html">
+      <form action="../../index.html" onsubmit="return loginCheck()">
         <div class="text-field">
-          <input type="text" id="loginemail" /><br />
+          <input
+            type="text"
+            id="loginemail"
+            onchange="removeRequired(this)"
+          /><br />
           <label for="loginemail">Email</label>
         </div>
         <div class="text-field">
-          <input type="password" id="loginpassword" /><br />
+          <input
+            type="password"
+            id="loginpassword"
+            onchange="removeRequired(this)"
+          /><br />
           <label for="loginpassword">Password</label>
         </div>
-        <input type="submit" value="Login" onsubmit="loginCheck()" />
+        <input type="submit" value="Login" />
         <p>
           Don't have an account yet? <a href="register.html">Register</a> now!
         </p>
