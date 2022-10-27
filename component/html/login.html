@@ -35,16 +35,16 @@
     </nav>
     <div class="login-form">
       <h1>Login</h1>
-      <form action="./index.html">
+      <form action="../../index.html">
         <div class="text-field">
-          <input type="text" id="loginemail" required /><br />
+          <input type="text" id="loginemail" /><br />
           <label for="loginemail">Email</label>
         </div>
         <div class="text-field">
-          <input type="password" id="loginpassword" required /><br />
+          <input type="password" id="loginpassword" /><br />
           <label for="loginpassword">Password</label>
         </div>
-        <input type="button" value="Login" />
+        <input type="submit" value="Login" onsubmit="loginCheck()" />
         <p>
           Don't have an account yet? <a href="register.html">Register</a> now!
         </p>
@@ -68,5 +68,6 @@
       <p>Copyright ©2022 Andrew Garcia. All Rights Reserved</p>
     </footer>
     <script src="../js/home.js"></script>
+    <script src="../js/form.js"></script>
   </body>
 </html>

@@ -36,39 +36,44 @@
     </nav>
     <div class="login-form">
       <h1>Register</h1>
-      <form action="./index.html">
+      <form action="../../index.html">
         <div class="text-field">
-          <input type="text" id="name" required /><br />
-          <label for="name">Full Name</label>
+          <input type="text" id="regisname" /><br />
+          <label for="regisname">Full Name</label>
         </div>
         <div class="text-field">
-          <input type="email" id="email" required /><br />
-          <label for="email">Email</label>
+          <input type="email" id="regisemail" /><br />
+          <label for="regisemail">Email</label>
         </div>
         <div class="radio-field">
           <p>Gender</p>
-          <input type="radio" name="gender" id="male" />
-          <label for="male">Male</label>
-          <input type="radio" name="gender" id="female" />
-          <label for="female">Female</label>
+          <input type="radio" name="gender" id="genmale" />
+          <label for="genmale">Male</label>
+          <input type="radio" name="gender" id="genfemale" />
+          <label for="genfemale">Female</label>
         </div>
         <div class="select-field">
-          <label for="city">City<br /><br /></label>
-          <select id="city" name="city">
+          <label for="regiscity">City<br /><br /></label>
+          <select id="regiscity" name="city">
             <option>Jakarta</option>
             <option>Tangerang</option>
             <option>Bekasi</option>
           </select>
         </div>
         <div class="text-field">
-          <input type="password" id="password" required /><br />
+          <input type="password" id="regispassword" /><br />
           <label for="password">Password</label>
         </div>
         <div class="text-field">
-          <input type="password" id="password2" required /><br />
+          <input type="password" id="regispassword2" /><br />
           <label for="password">Confirm Password</label>
         </div>
-        <input type="button" value="Register" id="button" />
+        <input
+          type="submit"
+          value="Register"
+          id="regisbutton"
+          onsubmit="regisCheck()"
+        />
       </form>
     </div>
     <footer>
@@ -89,5 +94,6 @@
       <p>Copyright ©2022 Andrew Garcia. All Rights Reserved</p>
     </footer>
     <script src="../js/home.js"></script>
+    <script src="../js/form.js"></script>
   </body>
 </html>

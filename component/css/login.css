@@ -55,9 +55,10 @@ body {
   color: #38abab;
 }
 
-input[type="button"] {
-  background-color: #38abab;
-  color: white;
+input[type="submit"] {
+  color: #38abab;
+  background-color: white;
+  box-shadow: 0 0 1px 1px gainsboro;
   border-radius: 2.5px;
   width: 40%;
   padding: 0.5em;

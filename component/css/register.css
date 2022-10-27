@@ -18,7 +18,6 @@
 .select-field {
   text-align: start;
   margin: 20px 1.3em;
-  /* width: 100%; */
 }
 
 .select-field select {
@@ -26,7 +25,9 @@
   height: 2.5rem;
 }
 
-#button {
+#regisbutton {
+  background-color: #38abab;
+  color: white;
   margin-block: 1em;
 }
 
@@ -35,6 +36,7 @@
   top: 10px;
   color: #38abab;
 }
+
 @media only screen and (min-width: 600px) {
   .login-form {
     width: 40vw;
